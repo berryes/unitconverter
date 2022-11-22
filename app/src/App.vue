@@ -63,6 +63,13 @@ input{
   border-radius: 1em;
   box-shadow: 2px 2px 5px #babecc,
               -5px -5px 10px #ffffff73;
+
+  -moz-appearance: textfield;
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 }
 
 button{
@@ -103,8 +110,17 @@ body{
 
 nav {
   margin-top: 2em;
+  display: flex; 
+  justify-content: center;
 }
+@media only screen and (max-width: 600px) {
 
+  nav {
+  margin-top: 2em;
+  display: flex; 
+  flex-direction: column;
+}
+}
 
 
 nav a {
@@ -128,7 +144,7 @@ footer p {
   margin-left: 1em;
 }
 footer {
-
+  font-size: 1em;
   position: absolute;
   bottom: 1em;
   margin-left: 1em;
